@@ -1,4 +1,4 @@
-## ts2sls_python - Python ts2sls
+## ts2sls_python
 
 
 Ankit Bhutani
