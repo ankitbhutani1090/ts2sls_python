@@ -1,10 +1,3 @@
-"
-install.packages(\"reticulate\")
-setwd('/Users/ankit/Desktop/ts2sls_python/ts2sls_python')
-py_install(\"pandas\")
-
-"
-
 rm(list=ls())
 library(reticulate)
 ivregress <- import("ivregress")

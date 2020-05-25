@@ -34,8 +34,9 @@ def _ivregress(X, Z, y, verbose = False):
         print(np.sqrt(np.diag(Var_beta_2sls)))
     return beta_2sls, Var_beta_2sls
 
-def ivregress_2sls(S, y_var, regs, ev, inst, verbose=False):
-    # TODO: handle the constant better - without duplicating or overwriting the data
+def ivregress_2sls(df, y_var, regs, ev, inst, verbose=False):
+
+    S = deepcopy(df)
     S['_const'] = 1
     
     # exogenous variables
@@ -115,9 +116,13 @@ def _ts2sls(X2, X1, Z2, Z1, y1, y_z, ev_ind, verbose=False):
     
     return beta_ts2sls, Var_beta_ts2sls
 
-# TODO: Account for the multiple endogenous variables
-def ts2sls(S1, S2, y_var, regs, ev, inst, verbose=False):
-    # TODO: handle the constant better - without duplicating or overwriting the data
+
+
+def ts2sls(df1, df2, y_var, regs, ev, inst, verbose=False):
+
+    S1 = deepcopy(df1)
+    S2 = deepcopy(df2)
+
     S1['_const'] = 1
     S2['_const'] = 1
     
