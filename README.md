@@ -1,8 +1,5 @@
 ## ts2sls_python
 
-
-Ankit Bhutani
-
 This is a Python program to calculate two-sample two-stage least squares (ts2sls) estimates based on Inoue and Solon (2010).
 This is a follow up to Dr. Jeffrey Shrader's Stata code for the same available [here](https://github.com/jshrader/ts2sls).
 
